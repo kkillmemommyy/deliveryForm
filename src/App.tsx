@@ -76,24 +76,24 @@ const App = () => {
         </label>
         <label className='field'>
           Город
-          <input name='city' value={formState.city} type='text' placeholder='Введите название города' onChange={onChange} />
+          <input required name='city' value={formState.city} type='text' placeholder='Введите название города' onChange={onChange} />
         </label>
         <label className='field'>
           Улица
-          <input name='street' value={formState.street} type='text' placeholder='Введите название улицы' onChange={onChange} />
+          <input required name='street' value={formState.street} type='text' placeholder='Введите название улицы' onChange={onChange} />
         </label>
         <section className='section'>
           <label className='field'>
             Индекс
-            <input name='zipCode' value={formState.zipCode} type='number' onChange={onChange} />
+            <input required name='zipCode' value={formState.zipCode} type='number' onChange={onChange} />
           </label>
           <label className='field'>
             Дом
-            <input name='houseNumber' value={formState.houseNumber} type='number' onChange={onChange} />
+            <input required name='houseNumber' value={formState.houseNumber} type='number' onChange={onChange} />
           </label>
           <label className='field'>
             Корпус
-            <input name='building' value={formState.building} type='number' onChange={onChange} />
+            <input required name='building' value={formState.building} type='number' onChange={onChange} />
           </label>
         </section>
         <label className='checkbox-field'>
@@ -106,15 +106,15 @@ const App = () => {
             <section className='section'>
               <label className='field'>
                 Подъезд
-                <input name='entrance' value={formState.entrance} type='number' onChange={onChange} />
+                <input required name='entrance' value={formState.entrance} type='number' onChange={onChange} />
               </label>
               <label className='field'>
                 Этаж
-                <input name='floor' value={formState.floor} type='number' onChange={onChange} />
+                <input required name='floor' value={formState.floor} type='number' onChange={onChange} />
               </label>
               <label className='field'>
                 Квартира
-                <input name='apartment' value={formState.apartment} type='number' onChange={onChange} />
+                <input required name='apartment' value={formState.apartment} type='number' onChange={onChange} />
               </label>
             </section>
             <textarea name='info' value={formState.info} placeholder='Код домофона, как пройти...' onChange={onChange}></textarea>
