@@ -10,13 +10,13 @@ interface IFromState {
   addressType: AddressType;
   city: string;
   street: string;
-  zipCode: number | '';
-  houseNumber: number | '';
-  building: number | '';
+  zipCode: string;
+  houseNumber: string;
+  building: string;
   isToDoor: boolean;
-  entrance: number | '';
-  floor: number | '';
-  apartment: number | '';
+  entrance: string;
+  floor: string;
+  apartment: string;
   info: string;
 }
 
