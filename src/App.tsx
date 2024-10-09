@@ -35,12 +35,18 @@ const App = () => {
     info: '',
   }));
 
-  const onChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
-    const target = e.target as HTMLInputElement;
-    const name = target.name;
-    const value = target.type === 'checkbox' ? target.checked : e.target.value;
 
-    setFormStae({ ...formState, [name]: value });
+
+  const onChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    const name = e.target.name;
+    let fieldValue;
+    if (e.target instanceof HTMLInputElement && e.target.type === 'checkbox') {
+      fieldValue = e.target.checked
+    } else {
+      fieldValue = e.target.value;
+    }
+
+    setFormStae({ ...formState, [name]: fieldValue });
   };
 
   const onSubmit = (e: FormEvent) => {
